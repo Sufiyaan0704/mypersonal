@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 123 38% 49%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 84 39% 52%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 36 100% 50%;
+    --accent-foreground: 222 47% 11%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    
+    --chart-1: 123 38% 49%;
+    --chart-2: 84 39% 52%;
+    --chart-3: 36 100% 50%;
+    --chart-4: 220 79% 46%;
+    --chart-5: 0 79% 63%;
+    
+    --radius: 0.5rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-['Quicksand'];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Quicksand'] font-semibold;
+  }
+  
+  p, span, div {
+    @apply font-['Lato'];
+  }
+  
+  .journal-content {
+    @apply font-['Lato'] leading-relaxed;
+  }
+  
+  .mood-entry-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .entry-card {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-1;
+  }
+  
+  .mood-indicator {
+    @apply rounded-full flex items-center justify-center;
+  }
+  
+  .mood-happy {
+    @apply bg-green-100 text-green-600;
+  }
+  
+  .mood-calm {
+    @apply bg-blue-100 text-blue-600;
+  }
+  
+  .mood-neutral {
+    @apply bg-yellow-100 text-yellow-600;
+  }
+  
+  .mood-tired {
+    @apply bg-orange-100 text-orange-600;
+  }
+  
+  .mood-sad {
+    @apply bg-red-100 text-red-600;
+  }
+}
